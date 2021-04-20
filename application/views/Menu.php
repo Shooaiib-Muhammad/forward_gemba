@@ -11,14 +11,10 @@
           </li> -->
           <li class="nav-item">
             <a class="nav-link " href="<?php echo base_url('Gemba/Problems')?>">
-         <i class="fas fa-exclamation-circle text-red"></i> Problems
+         <i class="fas fa-exclamation-circle text-red"></i> Summary
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " href="<?php echo base_url('Gemba/Issues')?>">
-            <i class="fas fa-asterisk text-green"></i></i> Issues
-            </a>
-          </li>
+         
          <?php
           $UserID= $this->session->userdata('user_id');
      if($UserID==479 or $UserID==352){

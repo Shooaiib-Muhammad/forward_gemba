@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://192.168.10.3:2000/Gemba';
-//$config['base_url'] = 'Http://localhost/Gemba';
+//$config['base_url'] = 'http://192.168.10.3:2000/Gemba';
+$config['base_url'] = 'Http://localhost/Gemba';
 /*
 
 

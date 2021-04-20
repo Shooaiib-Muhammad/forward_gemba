@@ -184,13 +184,7 @@ $this->load->View('header');
       </div>
     </div>
 
-  <div class="col-md-4">
-      <div class="form-group">
-     
-      <label class="text-white">Reason Descrpition :</label>
-        <input type="text"  value="<?php Echo $KeysData['ReasonDes1'];?>"    class="form-control" name="ReasonDesc2" >
-      </div>
-    </div>
+  
   </div>
   <div class="row">
   <div class="col-md-3">
@@ -226,40 +220,7 @@ $this->load->View('header');
     </div>
   </div>
     <div class="row" >
-    <div class="col-md-4">
-      
-        <?php
-          $Precentage=$KeysData['ProbPrcentage'];
-          if($Precentage==1){
-          $Prec="10 %";
-          }elseif($Precentage==2){
-            $Prec="20 %";
-          }elseif($Precentage==3){
-            $Prec="30 %";
-          }elseif($Precentage==4){
-            $Prec="40 %";
-          }elseif($Precentage==5){
-            $Prec="50 %";
-          }elseif($Precentage==6){
-            $Prec="60 %";
-          }elseif($Precentage==7){
-            $Prec="70 %";
-          }elseif($Precentage==8){
-            $Prec="80 %";
-          }elseif($Precentage==9){
-            $Prec="90 %";
-          }elseif($Precentage==10){
-            $Prec="100 %";
-          }
-        ?>
-     
-     
-<label class="text-white">Solution Precentage :</label>
-     <button type="button" class="btn btn-secondary btn-lg">
-  <span><?php Echo $Prec;?></span> 
-</button>
-     
-      </div>
+   
    
   <div class="row" style="border: 1px white solid;">
   <div class="col-md-6">

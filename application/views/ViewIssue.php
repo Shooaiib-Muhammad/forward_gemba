@@ -194,14 +194,14 @@ $this->load->View('header');
   </div>
   <br>
   <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-6">
   <div class="form-group">
         <label class="text-white">Reason</label>
         <select class="form-control" id="PIR" required  name="ReasonID" required>
         <option value="">Select Reasons</option>
         <option value="1">MAN</option>
-        <option value="2">MATERIAl</option>
-        <option value="3">MACHION</option>
+        <option value="2">MATERIAL</option>
+        <option value="3">MACHINE</option>
         <option value="4">METHOD</option>
         <option value="5">ENVIRONMENT</option>
         
@@ -209,16 +209,16 @@ $this->load->View('header');
       </div>
     </div>
 
-  <div class="col-md-4">
+  <div class="col-md-6">
       <div class="form-group">
       <label class="text-white">Reason Descrpition :</label>
         <input type="text" placeholder="Reason Descrpition"   class="form-control" name="ReasonDesc" required>
       </div>
     </div>
 
-
+</div>
   <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-6">
   <div class="form-group">
         <label class="text-white">Corrective Action Plan</label>
         <select class="form-control" id="PIR" required  name="CorrectiveAction" required>
@@ -229,13 +229,13 @@ $this->load->View('header');
   </select>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
     <div class="form-group">
         <label for="example-date-input" class="form-control-label text-white"  > Expected Closure Date :</label>
         <input class="form-control" type="date"  id="example-date-input" required name="expectedDate">
     </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
     <div class="form-group">
     <label for="exampleFormControlTextarea1" class="text-white">Description :</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" required name="Desc"></textarea>
@@ -243,25 +243,7 @@ $this->load->View('header');
     </div>
   </div>
     <div class="row" >
-    <div class="col-md-2">
-      <div class="form-group">
-      <label class="text-white">Solution Precentage :</label>
-      <select class="form-control" id="PIR" required  name="Precentage" required>
-        <option value="">Select Precentage %</option>
-        <option value="1">10 %</option>
-        <option value="2">20 %</option>
-        <option value="3">30 %</option>
-        <option value="4">40 %</option>
-        <option value="5">50 %</option>
-        <option value="6">60 %</option>
-        <option value="7">70 %</option>
-        <option value="8">80 %</option>
-        <option value="9">90 %</option>
-        <option value="10">100 %</option>
-       
-  </select>
-      </div>
-    </div>
+   <br>
   <div class="col-md-6">
   <label class="text-white">Solution Image :</label>
   <div class="custom-file">
@@ -273,9 +255,10 @@ $this->load->View('header');
     </div>
  
   </div>
+  <br>
   <div class="row">
     <div class="col-md-3">
-      <br>
+  
       <div class="form-group">
       
       <input type="text" class="form-control" name="PID" value="<?php Echo $KeysData['TID'];?> " hidden>

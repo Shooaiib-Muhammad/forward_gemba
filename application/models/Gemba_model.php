@@ -403,6 +403,13 @@ WHERE        (dbo.View_PIR_User_Informations.UserID = $userID)");
         return $query->result_array();
     }
 
+    public function CallAllProblems()
+    {
+        $UserId=$this->session->userdata('user_id');
+        $query = $this->db->query("SELECT dbo.View_PIR_problems.* FROM   dbo.View_PIR_problems");
+        return $query->result_array();
+    }
+
     Public Function CallProb($ID){
         $query = $this->db->query("SELECT   dbo.View_PIR_problems.* FROM   dbo.View_PIR_problems
         WHERE dbo.View_PIR_problems.TID= '$ID'");
@@ -461,6 +468,12 @@ WHERE        (dbo.View_PIR_User_Informations.UserID = $userID)");
             $query = $this->db->query("SELECT        dbo.View_PIR_Problem_Issue_To.*
             FROM            dbo.View_PIR_Problem_Issue_To
             WHERE        (ITOID = $UserId)");
+           return $query->result_array();
+         }
+          public function CallAllProblemsusers(){
+            $UserId=$this->session->userdata('user_id');
+            $query = $this->db->query("SELECT        dbo.View_PIR_Problem_Issue_To.*
+            FROM            dbo.View_PIR_Problem_Issue_To");
            return $query->result_array();
          }
     Public function Callissue($TID){

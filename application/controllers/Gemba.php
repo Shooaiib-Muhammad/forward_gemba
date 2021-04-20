@@ -410,7 +410,7 @@ class Gemba extends CI_Controller {
 		 $CorectiveAction = $this->input->post('CorrectiveAction');	
 		 $ExpectedDate = $this->input->post('expectedDate');	
 		 //$Desc = $this->input->post('Desc');	
-		 $Precentage = $this->input->post('Precentage');
+		 $Precentage = 0;
 		$PIRType = 3;
 		$DeptID = $this->input->post('DeptID');
 		$SectionID = $this->input->post('SectionID');
@@ -444,7 +444,8 @@ class Gemba extends CI_Controller {
 	$this->load->view('ViewFinalSolution',$data);
 	}
 	Public function Problems(){
-		$data['Problems'] = $this->gm->CallProblems();
+		$data['Problems'] = $this->gm->CallAllProblems();
+			$data['ViewProb'] = $this->gm->CallAllProblemsusers();
 	$this->load->view('Problems',$data);
 	}
 	Public function Issues(){
