@@ -688,6 +688,12 @@ $months*30*60*60*24)/ (60*60*24));
                          <button type="button" class="btn btn-Primary"><i class="fas fa-edit"></i> Edit</button></a>
                         
                          <?php
+                     }elseif($Key['Status']==2){
+                         ?>
+                         <a href="<?php echo base_url('Gemba/EditProb/'); Echo $Key['TID'];?>">
+                         <button type="button" class="btn btn-Primary"><i class="fas fa-eye"></i> view </button></a>
+                        
+                         <?php
                      }elseif($Key['Status']==4){
                        ?><a href="<?php echo base_url('Gemba/ViewFinalSolution/'); Echo $Key['TID'];?>">
                        <button type="button" class="btn btn-info"><i class="fas fa-eye"></i> View</button>

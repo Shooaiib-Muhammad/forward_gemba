@@ -81,8 +81,10 @@ $this->load->View('header');
                    <tr>
                     <th scope="col">PIR No.</th>
                    <th scope="col">Issue Date</th>
+                   
                      <th scope="col">Department</th>
                      <th scope="col">Sections</th>
+                      <th scope="col">Issue Send by</th>
                      <th scope="col">Issue To</th>     
                      <th scope="col">Severity level</th> 
                      <th scope="col">Status</th>    
@@ -104,6 +106,7 @@ $this->load->View('header');
                          </div>
                        </div>
                      </th>
+                     
                    <th scope="row">
                        <div class="media align-items-center">
                         
@@ -125,6 +128,16 @@ $this->load->View('header');
                      <td>
                      <?php Echo $Key['SectionName'];?>
                      </td>
+                      <th scope="row">
+                     
+                     <div class="media align-items-center">
+                        
+                        <div class="media-body">
+                          <span class="mb-0 text-sm"><?php Echo $Key['Sendername'];?></span>
+                        </div>
+                      </div>
+                     
+                     </th>
                      <th scope="row">
                      <div class="media align-items-center">
                         
@@ -187,7 +200,11 @@ $this->load->View('header');
                      <td>
                      
                      <?php
- 
+ if($Key['Status']==4){?>
+                        <button type="button" class="btn btn-success">Done</button>
+                        <?php
+                        
+                        }else{
  if($Key['Severitylevel']=="Meduim"){
   
   $TID=$Key['TID'];
@@ -312,6 +329,7 @@ $months*30*60*60*24)/ (60*60*24));
    <?php
 
  }
+}
  ?>
                      </td>
                      <td>
@@ -321,6 +339,12 @@ $months*30*60*60*24)/ (60*60*24));
                          ?>
                          <a href="<?php echo base_url('Gemba/EditProb/'); Echo $Key['TID'];?>">
                          <button type="button" class="btn btn-Primary"><i class="fas fa-edit"></i> Edit</button></a>
+                        
+                         <?php
+                     }elseif($Key['Status']==2){
+                         ?>
+                         <a href="<?php echo base_url('Gemba/EditProb/'); Echo $Key['TID'];?>">
+                         <button type="button" class="btn btn-Primary"><i class="fas fa-eye"></i> view </button></a>
                         
                          <?php
                      }elseif($Key['Status']==4){
@@ -350,7 +374,7 @@ $months*30*60*60*24)/ (60*60*24));
            </div>
          </div>
      </div>
-     <div class="row" id="showIssue">
+     <!-- <div class="row" id="showIssue">
          <div class="col">
            <div class="card shadow">
              <div class="card-header border-0">
@@ -365,6 +389,7 @@ $months*30*60*60*24)/ (60*60*24));
                    <th scope="col">Issue Send by</th>     
                      <th scope="col">Department</th>
                      <th scope="col">Sections</th>
+                        <th scope="col">Issue Solved  by</th>    
                      <th scope="col">Severity level</th>
                      <th scope="col">Status</th>
                      <th scope="col">Remaning Days</th>
@@ -417,10 +442,18 @@ $months*30*60*60*24)/ (60*60*24));
                      <td>
                      <?php Echo $Key['SectionName'];?>
                      </td>
+                      <th scope="row">
+                       <div class="media align-items-center">
+                        
+                         <div class="media-body">
+                           <span class="mb-0 text-sm"><?php Echo $Key['userSolvedBy'];?></span>
+                         </div>
+                       </div>
+                     </th>
                      <td>
                      
                      <?php
- 
+  
  if($Key['Severitylevel']=="Meduim"){
 ?>
 <button type="button" class="btn btn-default">
@@ -468,7 +501,11 @@ $months*30*60*60*24)/ (60*60*24));
                       ?>
                    </td>
                    <td><?php
- 
+ if($Key['Status']==4){?>
+                        <button type="button" class="btn btn-success">Done</button>
+                        <?php
+                        
+                        }else{
  if($Key['Severitylevel']=="Meduim"){
   
   $TID=$Key['TID'];
@@ -591,6 +628,7 @@ $months*30*60*60*24)/ (60*60*24));
    <?php
 
  }
+}
  ?>
                      </td>
                      <td>
@@ -625,7 +663,7 @@ $months*30*60*60*24)/ (60*60*24));
              </div>
            </div>
          </div>
-     </div>
+     </div> -->
     </div>
     
       <?php
