@@ -554,7 +554,12 @@ function showLines() {
                      <td>
                      
                      <?php
- 
+                     //Echo $Key['Status'];
+  if($Key['Status']==4){?>
+                        <button type="button" class="btn btn-success">Done</button>
+                        <?php
+                        
+                        }else{
  if($Key['Severitylevel']=="Meduim"){
   
   $TID=$Key['TID'];
@@ -677,6 +682,9 @@ $months*30*60*60*24)/ (60*60*24));
    <?php
 
  }
+
+}
+
  ?>
                      </td>
                      <td>
@@ -843,7 +851,11 @@ $months*30*60*60*24)/ (60*60*24));
                    </td>
                    <td>
                    <?php
- 
+   if($Key['Status']==4){?>
+                        <button type="button" class="btn btn-success">Done</button>
+                        <?php
+                        
+                        }else{
  if($Key['Severitylevel']=="Meduim"){
   
   $TID=$Key['TID'];
@@ -964,7 +976,7 @@ $months*30*60*60*24)/ (60*60*24));
   <span><i class="fas fa-calendar-day"></i><?php Echo $days; ?> Days Left</span>
 </button>
    <?php
-
+ }
  }
  ?>
                      </td>
